@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- OwlCarousel2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+
+  </style>
+
+</head>
+<body>
+
+    <header class="d-md-block d-lg-block d-none d-sm-none" style="position: fixed;width: 100%;">
+        <div class="">
+        <div class="top-head" style="background: #f47b1d;">    
+            <div class="d-flex flex-row p-2 container">    
+                <div class="col-2 col-sm-2 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-none d-sm-none d-md-block d-lg-block m-auto div-item">
+                    <div>
+                        <span><i class="fa-solid fa-bars text-white"></i></span> <img src="assets/images/logo.png" class="w-25" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-9 col-sm-9 col-md-7 col-lg-7 col-xl-7 col-xxl-7 m-auto div-item">
+                    <div class="">
+                        <div class="d-flex">
+                          <span class="btn btn-light rounded-0 shadow-none"><i class="fas fa-search"></i></span>  
+                          <input id="search-focus" type="search" class="form-control rounded-0 b-none" placeholder="Search for ID, category and more">
+                        </div>
+                      </div>
+                </div>
+                <!-- <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 d-none d-sm-none d-md-block d-lg-block m-auto div-item">
+                    <div>
+                        <button type="button" class="btn btn-outline-warning">Login</button>
+                    </div>
+                </div> -->
+                <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 m-auto div-item">
+                    <div>
+                        <ul class="list-unstyled d-flex m-auto">
+                            <li class="m-auto text-white d-flex"><i class="fa-solid fa-cart-plus"></i> <span class="d-none d-sm-none d-md-block d-lg-block cart-nr">Cart</span></li>
+                            <li class="m-auto text-white d-flex"><i class="fa-solid fa-user"></i> <span class="d-none d-sm-none d-md-block d-lg-block sign-nr">Sign in / Sign up</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="d-none d-sm-none d-md-block d-lg-block bg-head-back" style="background-color: #ffdec5;">
+            <div> <style>
+      .head-menu li a{color: black!important;}
+            </style>
+                <ul class="list-unstyled d-flex mb-3 head-menu">
+                    <li class="nav-link active"><a href="" class="text-decoration-none ">Top</a></li>
+                    <li class="nav-link"><a href="" class="text-decoration-none ">Bottoms</a></li>
+                    <li class="nav-link"><a href="" class="text-decoration-none ">Dresses &amp; Skirts</a></li>
+                    <li class="nav-link"><a href="" class="text-decoration-none ">Co-ords</a></li>
+                    <li class="nav-link"><a href="" class="text-decoration-none ">Sports</a></li>
+                    <li class="nav-link"><a href="" class="text-decoration-none ">Jewelry</a></li>
+                    <li class="nav-link"><a href="" class="text-decoration-none ">Bags</a></li>
+                    <li class="nav-link"><a href="" class="text-decoration-none ">Lingerie</a></li>
+                    <li class="nav-link"><a href="" class="text-decoration-none ">Pyiamas</a></li>
+                    <li class="nav-link"><a href="" class="text-decoration-none ">Swimwear</a></li>
+                    <li class="nav-link"><a href="" class="text-decoration-none ">Curve</a></li>
+                    <!-- <li class="nav-link"><a href="">Sweaters & Sweatshirts</a></li>
+                    <li class="nav-link"><a href="">Outerwears</a></li>
+                    <li class="nav-link"><a href="">Phone Accessories</a></li>
+                    <li class="nav-link"><a href="">other Accessories</a></li> -->
+                </ul>
+            </div>
+        </nav>    
+    </div>
+    </header>
+
+    <style>
+        @media only screen and (min-width: 600px) {
+        .div-top{padding-top: 120px!important;}
+        }
+       </style>
+
+<section class="bg-adout div-top">
+    <div class="container pt-4 pb-4">
+        <div class="">
+            <div>
+                <h3 class="">Login/Sign Up to explore more</h3>
+                <p><span>Login.Sign up</span><span></span></p>
+            </div>
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="text-center border border-dark bg-white p-2"><p class="text-center mb-2">Coupons</p><h4 class="m-0">0</h4></div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="text-center border border-dark bg-white p-2"><a href="wish-list.html"><p class="text-center mb-2">Wishlist</p><h4 class="m-0">1</h4></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container pt-4 pb-4">
+        <div class="row">
+            <div class="col-md-4 col-lg-4  mt-4">
+                <div class="border border-dark border-bottom-0 p-2"><h3 class="m-0"><img src="assets/images/orders.png" alt="" width="25px"> Orders</h3></div>
+                <div class="border border-dark border-bottom-0 p-2"><a href="login.html"><span class="in_title_text">My orders </span><span class="float-end"><i class="fa-solid fa-chevron-right"></i></span></a></div>
+                <div class="border border-dark border-bottom-0 p-2"><a href="login.html"><span class="in_title_text">Refunds/Returns </span><span class="float-end"><i class="fa-solid fa-chevron-right"></i></span></a></div>
+                <div class="border border-dark p-2"><a href="login.html"><span class="in_title_text">My Reviews </span><span class="float-end"><i class="fa-solid fa-chevron-right"></i></span></a></div>
+            </div>
+            <div class="col-md-4 col-lg-4 mt-4">
+                <div class="border border-dark border-bottom-0 p-2"><h3 class="m-0"><img src="assets/images/about.png" alt="" width="25px"> Any Question</h3></div>
+                <div class="border border-dark border-bottom-0 p-2"><a href="faq.html"><span class="in_title_text">FAQs </span><span class="float-end"><i class="fa-solid fa-chevron-right"></i></span></a></div>
+                <div class="border border-dark border-bottom-0 p-2"><a href="customer_service.html"><span class="in_title_text">Customer Service </span><span class="float-end"><i class="fa-solid fa-chevron-right"></i></span></a></div>
+                <div class="border border-dark border-bottom-0 p-2"><a href="login.html"><span class="in_title_text">My Profile </span><span class="float-end"><i class="fa-solid fa-chevron-right"></i></span></a></div>
+                <div class="border border-dark p-2"><a href="setting.html"><span class="in_title_text">Settings </span><span class="float-end"><i class="fa-solid fa-chevron-right"></i></span></a></div>
+            </div>
+            <div class="col-md-4 col-lg-4 mt-4">
+                <div class="border border-dark border-bottom-0 p-2"><h3 class="m-0"><img src="assets/images/any.png" alt="" width="25px"> About</h3></div>
+                <div class="border border-dark border-bottom-0 p-2"><a href="aboutus.html"><span class="in_title_text">About Us </span><span class="float-end"><i class="fa-solid fa-chevron-right"></i></span></a></div>
+                <div class="border border-dark border-bottom-0 p-2"><a href="return.html"><span class="in_title_text">Return Policy </span><span class="float-end"><i class="fa-solid fa-chevron-right"></i></span</a></div>
+                <div class="border border-dark border-bottom-0 p-2"><a href="shipping_delivery.html"><span class="in_title_text">Shipping & Delivery </span><span class="float-end"><i class="fa-solid fa-chevron-right"></i></span></a></div>
+                <div class="border border-dark p-2"><a href="policy.html"><span class="in_title_text">More </span><span class="float-end"><i class="fa-solid fa-chevron-right"></i></span></a></div>
+            </div>
+           
+
+        </div>
+    </div>
+</section>
+<hr>
+<section id="section1">
+    <div class="discount">
+    <div class="container pt-4 pb-4">
+        <h3 class="text-center">You May Also Like</h3>
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3 p-0 pr-1">
+                <div class="m-1">
+                <img src="assets/images/pr1.jfif" class="w-100" alt="">
+                <div class="p-2 mb-2">
+                       <h5><span class="text-danger">-58%</span><span> ₹289 </span></h5>
+                        <p class="text-muted strike-de"><strike>₹690</strike></p>
+                        <span><img src="assets/images/col-prod.jfif" alt="" width="13%" class="rounded-circle border border-dark p2"></span>
+                </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3 p-0 pr-1">
+                <div class="m-1">
+                <img src="assets/images/pr1.jfif" class="w-100" alt="">
+                <div class="p-2 mb-2">
+                       <h5><span class="text-danger">-58%</span><span> ₹289 </span></h5>
+                        <p class="text-muted strike-de"><strike>₹690</strike></p>
+                        <span><img src="assets/images/col-prod.jfif" alt="" width="13%" class="rounded-circle border border-dark p2"></span>
+                </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3 p-0 pr-1">
+                <div class="m-1">
+                <img src="assets/images/pr1.jfif" class="w-100" alt="">
+                <div class="p-2 mb-2">
+                       <h5><span class="text-danger">-58%</span><span> ₹289 </span></h5>
+                        <p class="text-muted strike-de"><strike>₹690</strike></p>
+                        <span><img src="assets/images/col-prod.jfif" alt="" width="13%" class="rounded-circle border border-dark p2"></span>
+                </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3 p-0 pr-1">
+                <div class="m-1">
+                <img src="assets/images/pr1.jfif" class="w-100" alt="">
+                <div class="p-2 mb-2">
+                       <h5><span class="text-danger">-58%</span><span> ₹289 </span></h5>
+                        <p class="text-muted strike-de"><strike>₹690</strike></p>
+                        <span><img src="assets/images/col-prod.jfif" alt="" width="13%" class="rounded-circle border border-dark p2"></span>
+                </div>
+                </div>
+            </div>
+
+
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3 p-0 pr-1">
+                <div class="m-1">
+                <img src="assets/images/pr1.jfif" class="w-100" alt="">
+                <div class="p-2 mb-2">
+                       <h5><span class="text-danger">-58%</span><span> ₹289 </span></h5>
+                        <p class="text-muted strike-de"><strike>₹690</strike></p>
+                        <span><img src="assets/images/col-prod.jfif" alt="" width="13%" class="rounded-circle border border-dark p2"></span>
+                </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3 p-0 pr-1">
+                <div class="m-1">
+                <img src="assets/images/pr1.jfif" class="w-100" alt="">
+                <div class="p-2 mb-2">
+                       <h5><span class="text-danger">-58%</span><span> ₹289 </span></h5>
+                        <p class="text-muted strike-de"><strike>₹690</strike></p>
+                        <span><img src="assets/images/col-prod.jfif" alt="" width="13%" class="rounded-circle border border-dark p2"></span>
+                </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3 p-0 pr-1">
+                <div class="m-1">
+                <img src="assets/images/pr1.jfif" class="w-100" alt="">
+                <div class="p-2 mb-2">
+                       <h5><span class="text-danger">-58%</span><span> ₹289 </span></h5>
+                        <p class="text-muted strike-de"><strike>₹690</strike></p>
+                        <span><img src="assets/images/col-prod.jfif" alt="" width="13%" class="rounded-circle border border-dark p2"></span>
+                </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3 p-0 pr-1">
+                <div class="m-1">
+                <img src="assets/images/pr1.jfif" class="w-100" alt="">
+                <div class="p-2 mb-2">
+                       <h5><span class="text-danger">-58%</span><span> ₹289 </span></h5>
+                        <p class="text-muted strike-de"><strike>₹690</strike></p>
+                        <span><img src="assets/images/col-prod.jfif" alt="" width="13%" class="rounded-circle border border-dark p2"></span>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section> 
+
+<div class="text-center loading d-md-none d-lg-none">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  
+
+<footer>
+    <div id="footer-pc" class="d-none d-sm-none d-md-block d-lg-block text-dark">
+    <div class="container pt-4 pb-4 foot-pc">
+        <div class="row">     
+            <div class="col-md-2 col-lg-2 col-xl-2 col-xxl-4">
+                <h3>About</h3>
+                <ul class="list-unstyled">
+                    <li><a href="about.html" class="text-decoration-none text-dark">About Us</a></li>
+                    <li><a href="return.html" class="text-decoration-none text-dark">Return Policy</a></li>
+                    <li><a href="shipping_delivery.html" class="text-decoration-none text-dark">Shipping & Delivery</a></li>
+                    <li><a href="" class="text-decoration-none text-dark">Cancellation & Modifications</a></li>
+                </ul>
+            </div>  
+            <div class="col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+                <h3>Any Question</h3>
+                <ul class="list-unstyled">
+                    <li><a href="faq.html" class="text-decoration-none text-dark">FAQs</a></li>
+                    <li><a href="login.html" class="text-decoration-none text-dark">Customer Service</a></li>
+                    <li><a href="login.html" class="text-decoration-none text-dark">My Profile</a></li>
+                    <li><a href="setting.html" class="text-decoration-none text-dark">Settings</a></li>
+                </ul>
+            </div>    
+            <div class="col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <h3>Categories</h3>
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <ul class="list-unstyled">
+                        <li><a href="" class="text-decoration-none text-dark">Top</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Bottoms</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Dresses & Skirts</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Co-ords</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Sports</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Jewelry</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Bags</a></li> 
+                    </ul>
+                </div>
+            
+                <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <ul class="list-unstyled">
+                    <li><a href="" class="text-decoration-none text-dark">Bags</a></li>
+                    <li><a href="" class="text-decoration-none text-dark">Lingerie</a></li>
+                    <li><a href="" class="text-decoration-none text-dark">Pyiamas</a></li>
+                    <li><a href="" class="text-decoration-none text-dark">Swimwear</a></li>
+                    <li><a href="" class="text-decoration-none text-dark">Curve</a></li>
+                    <li><a href="" class="text-decoration-none text-dark">Sweaters & Sweatshirts</a></li>
+                    <li><a href="" class="text-decoration-none text-dark">Outerwears</a></li>
+                    <li><a href="" class="text-decoration-none text-dark">Phone Accessories</a></li>
+                    <li><a href="" class="text-decoration-none text-dark">other Accessories</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+                <h3>Categories</h3>
+                <div>
+                <ul class="list-unstyled">
+                <li><a href="" class="text-decoration-none text-dark">Facebook</a></li>
+                <li><a href="" class="text-decoration-none text-dark">Twitter</a></li>
+                <li><a href="" class="text-decoration-none text-dark">YouTube</a></li>
+                </ul>
+                </div>
+                <div>
+                <p><b>Call Us : 1800 890 1222</b><br>
+                    8:00 AM to 8:00 PM, 365 days</p>
+                </div>
+           
+                <div class="row">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <div><img src="assets/images/google-play.png" width="100%" alt=""></div>
+                </div>
+            
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <div><img src="assets/images/app-store.png" width="100%" alt=""></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="d-block d-sm-block d-md-none d-lg-none position-fixed w-100 bottom-manu">
+        <div class="back-color">
+        <div class="row m-auto">
+            <div class="col-2 col-sm-2 m-auto">
+                <div class="text-center"><span class="footer-icon"><img src="assets/images/home.png" width="60%" alt=""></span><br><span class="home">Home</span></div>
+            </div>
+            <div class="col-2 col-sm-2 m-auto">
+                <div class="text-center"><span class="footer-icon"><img src="assets/images/category.png" width="60%" alt=""></span><br><span class="category">Category</span></div>
+            </div>
+            <div class="col-2 col-sm-2 m-auto">
+                <div class="text-center"><span class="footer-icon"><img src="assets/images/discover.png" width="60%" alt=""></span><br><span class="discover">Discover</span></div>
+            </div>
+            <div class="col-2 col-sm-2 m-auto">
+                <div class="text-center"><span class="footer-icon"><img src="assets/images/bag.png" width="60%" alt=""></span><br><span class="bag">Bag</span></div>
+            </div>
+            <div class="col-2 col-sm-2 m-auto">
+                <div class="text-center"><span class="footer-icon"><img src="assets/images/me.png" width="60%" alt=""></span><br><span class="me">Me</span></div>
+            </div>
+           
+        </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<div id="sidbarb" style="position: fixed; z-index: 2147483647; display: block;">
+    <a href="https://wa.me/918094374568"><img src="assets/images/offer.jfif"></a>
+   </div>
+
+
+<!-- 
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("discount-sirvi");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky-sirvi")
+      } else {
+        navbar.classList.remove("sticky-sirvi");
+      }
+    }
+    </script> -->
+</body>
+</html>

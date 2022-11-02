@@ -1,0 +1,755 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- OwlCarousel2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+a{text-decoration: none;color: #323232;}    
+.head-back-icon {
+    width: 24px;
+}
+.nr-box {
+    background: #f8f6f3;
+}
+#cm-in .cm-in-box {
+    margin-top: -26px;
+}
+#cm-in .nav-item {
+    margin-left: 15px;
+}
+#cm-in .nav-pills .nav-link {
+    border-radius: 0px;
+}
+#cm-in .nav-link {
+    padding: 0px!important;
+}
+#cm-in .nav-pills .nav-link.active {
+    border-bottom: 1px solid black;
+    color: #000;
+    background: none;
+}
+.size-reco li{font-size: 15px;}
+.plus{float: right;}
+ .color-change{
+animation-name: color-chang;
+animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+@keyframes color-chang {
+    50% {
+    background-color: #ff2c00;
+    color: #fff;
+}
+}
+.nav-pills li .active{border-bottom: 2px solid #777777;} 
+.productChart {
+    font-size: 13px;
+}
+table{width: 100%;}
+
+.img-size{width: 40%;}
+.table-pt{margin-top: -348px;position: relative;}
+@media only screen and (max-width: 600px) {
+    .img-size{width: 80%!important;}
+    .table-pt{margin-top: -190px;position: relative;}
+}
+#footer-pc{background: rgba(21,27,57,.08);    margin-top: 82px;}
+.modal-header{border: none;}
+.ub-image{overflow: scroll;
+    width: 100%;
+    position: relative;
+    border: 1px solid #8a8989;}
+.rulerContainer{}
+.ruler{ }
+
+.numberMeasurement-rulerOuter{}
+.numberMeasurement-rulerMiddle{}
+.ub-image-img{    height: 100%;
+    width: 100%;}
+.markerContainer{display: flex;
+    /* -webkit-justify-content: space-between; */
+    justify-content: space-between;
+    margin: 2.13333vw 0 0;}   
+.numberMeasurement{font-size: 13px;}         
+</style>
+
+</head>
+<body class=""> 
+   <div class="bg-white border-bottom-secondary top-0 position-fixed w-100 border-bottom-nr">
+    <div class="container">
+        <div class="row pt-2 pb-2">
+            <div class="col-2 col-md-2 col-lg-2"><a href="details.html"><img src="assets/images/laft-arr.png" alt="" class="head-back-icon"></a></div>
+            <div class="col-8 col-md-8 col-lg-8"><h4 class="text-center m-0 p-0">Size Guide</h4></div>
+            <div class="col-2 col-md-2 col-lg-2"></div>
+        </div>    
+    </div>
+   </div>
+
+   <section class="mt-5 mt-5 mb-5">
+    <div class="container">
+        <div class="mt-4">
+            <div class="">
+                <ul class="nav nav-pills size-reco d-flex p-2" role="tablist">
+                    <!-- <li class="m-auto"><a class="text-dark" data-bs-toggle="pill" href="#f">Size Recommendation</a></li> -->
+                    <li class="m-auto"><a class="active text-dark" data-bs-toggle="pill" href="#g">Product Measurements</a></li>
+                </ul>
+                <hr class="mt-0">
+                
+                <div class="tab-content  p-2">
+                    <!-- <div id="f" class="tab-pane">
+                        <div>
+                            <div class="row">
+                                <div class="col-2 col-sm-2 col-md-2 col-lg-1"><div class="border border-secondary"><img src="assets/images/woman.png" alt="" class="w-100"></div></div>
+                                <div class="col-10 col-sm-10 col-md-10 col-lg-11">
+								<a href="my-measurement.html">
+								<div class="p-1 border border-danger color-change"><span class="heght-weight">Height / Weight</span><span class="plus"><i class="fa-solid fa-plus"></i></span></div>
+								</a>
+								</div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-7 col-sm-7 col-md-6 col-lg-6"><div><img src="assets/images/size.png" alt="" class="img-size"></div></div>
+                                <div class="col-5 col-sm-5 col-md-6 col-lg-6" style="margin-top: 120px;">
+                                    <div class="p-1 border border-secondary" data-bs-toggle="modal" data-bs-target="#bust"><span class="">Bust</span><span class="plus"><i class="fa-solid fa-plus"></i></span></div>
+                                    <div class="p-1 border border-secondary mt-2" data-bs-toggle="modal" data-bs-target="#waistline"><span class="">Waistline</span><span class="plus"><i class="fa-solid fa-plus"></i></span></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white table-pt">
+                                    <div class="border border-secondary">
+                                        <div class="row">
+                                        <div class="col-2 col-sm-2 col-md-2 col-lg-2"><img src="assets/images/size-img.jfif" alt=""></div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 m-auto text-center"><span style="font-size: 14px;">Add more information</span></div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 float-end cm-in-box m-auto"> 
+                                        <ul class="nav nav-pills m-auto" role="tablist" style="font-size: 14px;">
+                                            <li class="m-auto"><a class="active" data-bs-toggle="pill" href="#y">INCH</a></li>
+                                            <li class="m-auto"><a class="" data-bs-toggle="pill" href="#z">CM</a></li>
+                                          </ul>
+                                         </div> 
+                                         </div>
+                                    </div>
+                                  
+                                    
+                                    <div class="border border-secondary m-0">
+                                    <div class="tab-content">
+                                     <div id="y" class="tab-pane active table-responsive">
+                                      <table class="table table-bordered">
+                                            <thead>
+                                                <tr class="productChart--caption--Mu7QAcJ">
+                                                    <th class="productChart">Size</th>
+                                                    <th class="productChart">XS</th>
+                                                    <th class="productChart">S</th>
+                                                    <th class="productChart">M</th>
+                                                    <th class="productChart">L</th>
+                                                    <th class="productChart">XL</th>
+                                                    <th class="productChart">2XL</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="productChart">
+                                                    <td class="productChart">Length(cm)</td>
+                                                    <td class="productChart">64</td>
+                                                    <td class="productChart">66</td>
+                                                    <td class="productChart">68</td>
+                                                    <td class="productChart">70</td>
+                                                    <td class="productChart">74</td>
+                                                    <td class="productChart">76</td>
+                                                </tr>
+                                                <tr class="productChart">
+                                                    <td class="productChart">Shoulder(cm)</td>
+                                                    <td class="productChart">43</td>
+                                                    <td class="productChart">45</td>
+                                                    <td class="productChart">47</td>
+                                                    <td class="productChart">49</td>
+                                                    <td class="productChart">53</td>
+                                                    <td class="productChart">55</td>
+                                                </tr>
+                                                <tr class="productChart">
+                                                    <td class="productChart">Bust(cm)</td>
+                                                    <td class="productChart">96</td>
+                                                    <td class="productChart">100</td>
+                                                    <td class="productChart">104</td>
+                                                    <td class="productChart">108</td>
+                                                    <td class="productChart">116</td>
+                                                    <td class="productChart">120</td>
+                                                </tr>
+                                                <tr class="productChart">
+                                                    <td class="productChart">Sleeve(cm)</td>
+                                                    <td class="productChart">19</td>
+                                                    <td class="productChart">19.5</td>
+                                                    <td class="productChart">20</td>
+                                                    <td class="productChart">20.5</td>
+                                                    <td class="productChart">21.5</td>
+                                                    <td class="productChart">22</td>
+                                                </tr>
+                                                <tr class="productChart">
+                                                    <td class="productChart">Sleeve Width(cm)</td>
+                                                    <td class="productChart">39</td>
+                                                    <td class="productChart">40</td>
+                                                    <td class="productChart">41</td>
+                                                    <td class="productChart">42</td>
+                                                    <td class="productChart">44</td>
+                                                    <td class="productChart">45</td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                        
+                                    </div>
+                                      <div id="z" class="tab-pane fade table-responsive">
+                                        
+        
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr class="productChart">
+                                                <th class="productChart">Size</th>
+                                                <th class="productChart">XS</th>
+                                                <th class="productChart">S</th>
+                                                <th class="productChart">M</th>
+                                                <th class="productChart">L</th>
+                                                <th class="productChart">XL</th>
+                                                <th class="productChart">2XL</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="productChart">
+                                                <td class="productChart">Length(in)</td>
+                                                <td class="productChart">25.2</td>
+                                                <td class="productChart">26</td>
+                                                <td class="productChart">26.8</td>
+                                                <td class="productChart">27.6</td>
+                                                <td class="productChart">29.1</td>
+                                                <td class="productChart">29.9</td>
+                                            </tr>
+                                            <tr class="productChart">
+                                                <td class="productChart">Shoulder(in)</td>
+                                                <td class="productChart">16.9</td>
+                                                <td class="productChart">17.7</td>
+                                                <td class="productChart">18.5</td>
+                                                <td class="productChart">19.3</td>
+                                                <td class="productChart">20.9</td>
+                                                <td class="productChart">21.7</td>
+                                            </tr><tr class="productChart">
+                                                <td class="productChart">Bust(in)</td>
+                                                <td class="productChart">37.8</td>
+                                                <td class="productChart">39.4</td>
+                                                <td class="productChart">40.9</td>
+                                                <td class="productChart">42.5</td>
+                                                <td class="productChart">45.7</td>
+                                                <td class="productChart">47.2</td>
+                                            </tr><tr class="productChart">
+                                                <td class="productChart">Sleeve(in)</td>
+                                                <td class="productChart">7.5</td>
+                                                <td class="productChart">7.7</td>
+                                                <td class="productChart">7.9</td>
+                                                <td class="productChart">8.1</td>
+                                                <td class="productChart">8.5</td>
+                                                <td class="productChart">8.7</td>
+                                            </tr><tr class="productChart">
+                                                <td class="productChart">Sleeve Width(in)</td>
+                                                <td class="productChart">15.4</td>
+                                                <td class="productChart">15.7</td>
+                                                <td class="productChart">16.1</td>
+                                                <td class="productChart">16.5</td>
+                                                <td class="productChart">17.3</td>
+                                                <td class="productChart">17.7</td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                     -->
+
+
+                    <div id="g" class="tab-pane active mt-2">
+                        <div class="" id="cm-in">
+                            <div class=" pb-2">
+                            <div><span class="pm"></span></div>
+                            <div class="float-end cm-in-box">    
+                            <ul class="nav nav-pills" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="pill" href="#r">CM</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="pill" href="#t">INCH</a>
+                              </li>
+                            </ul>
+                            </div>
+                            </div>
+                          
+                            <!-- Tab panes -->
+                            <div class="border border-secondary m-0">
+                            
+                            <div class="tab-content">
+                                
+                              <div id="r" class="tab-pane table-responsive">
+                                
+
+
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr class="productChart--caption--Mu7QAcJ">
+                                            <th class="productChart--headerCell--Mz2hdMi productChart--firstCell--HaM0ijM">Size</th>
+                                            <th class="productChart--headerCell--Mz2hdMi">XS</th>
+                                            <th class="productChart--headerCell--Mz2hdMi">S</th>
+                                            <th class="productChart--headerCell--Mz2hdMi">M</th>
+                                            <th class="productChart--headerCell--Mz2hdMi">L</th>
+                                            <th class="productChart--headerCell--Mz2hdMi">XL</th>
+                                            <th class="productChart--headerCell--Mz2hdMi">2XL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="productChart--row--G5ENkcV">
+                                            <td class="productChart--bodyCell--JVgeLTw productChart--firstCell--HaM0ijM">Length(cm)</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">64</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">66</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">68</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">70</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">74</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">76</td>
+                                        </tr>
+                                        <tr class="productChart--row--G5ENkcV">
+                                            <td class="productChart--bodyCell--JVgeLTw productChart--firstCell--HaM0ijM">Shoulder(cm)</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">43</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">45</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">47</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">49</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">53</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">55</td>
+                                        </tr>
+                                        <tr class="productChart--row--G5ENkcV">
+                                            <td class="productChart--bodyCell--JVgeLTw productChart--firstCell--HaM0ijM">Bust(cm)</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">96</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">100</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">104</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">108</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">116</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">120</td>
+                                        </tr><tr class="productChart--row--G5ENkcV">
+                                            <td class="productChart--bodyCell--JVgeLTw productChart--firstCell--HaM0ijM">Sleeve(cm)</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">19</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">19.5</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">20</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">20.5</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">21.5</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">22</td>
+                                        </tr><tr class="productChart--row--G5ENkcV">
+                                            <td class="productChart--bodyCell--JVgeLTw productChart--firstCell--HaM0ijM">Sleeve Width(cm)</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">39</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">40</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">41</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">42</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">44</td>
+                                            <td class="productChart--bodyCell--JVgeLTw">45</td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                
+                            </div>
+                              <div id="t" class="tab-pane fade active show table-responsive">
+                                
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr class="productChart--caption--Mu7QAcJ">
+                                        <th class="productChart--headerCell--Mz2hdMi productChart--firstCell--HaM0ijM">Size</th>
+                                        <th class="productChart--headerCell--Mz2hdMi">XS</th>
+                                        <th class="productChart--headerCell--Mz2hdMi">S</th>
+                                        <th class="productChart--headerCell--Mz2hdMi">M</th>
+                                        <th class="productChart--headerCell--Mz2hdMi">L</th>
+                                        <th class="productChart--headerCell--Mz2hdMi">XL</th>
+                                        <th class="productChart--headerCell--Mz2hdMi">2XL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="productChart--row--G5ENkcV">
+                                        <td class="productChart--bodyCell--JVgeLTw productChart--firstCell--HaM0ijM">Length(in)</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">25.2</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">26</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">26.8</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">27.6</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">29.1</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">29.9</td>
+                                    </tr>
+                                    <tr class="productChart--row--G5ENkcV">
+                                        <td class="productChart--bodyCell--JVgeLTw productChart--firstCell--HaM0ijM">Shoulder(in)</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">16.9</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">17.7</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">18.5</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">19.3</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">20.9</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">21.7</td>
+                                    </tr><tr class="productChart--row--G5ENkcV">
+                                        <td class="productChart--bodyCell--JVgeLTw productChart--firstCell--HaM0ijM">Bust(in)</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">37.8</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">39.4</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">40.9</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">42.5</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">45.7</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">47.2</td>
+                                    </tr><tr class="productChart--row--G5ENkcV">
+                                        <td class="productChart--bodyCell--JVgeLTw productChart--firstCell--HaM0ijM">Sleeve(in)</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">7.5</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">7.7</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">7.9</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">8.1</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">8.5</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">8.7</td>
+                                    </tr><tr class="productChart--row--G5ENkcV">
+                                        <td class="productChart--bodyCell--JVgeLTw productChart--firstCell--HaM0ijM">Sleeve Width(in)</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">15.4</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">15.7</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">16.1</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">16.5</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">17.3</td>
+                                        <td class="productChart--bodyCell--JVgeLTw">17.7</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+               </div>
+            </div>  
+        </div>
+    </div>
+   </section>
+
+   <!-- <section>
+    <div class="container">
+    <div class="row">
+        <div class="col-2 col-sm-2 col-md-4 col-lg-4"><div class="border border-secondary"><img src="assets/images/woman.png" alt="" class="w-100"></div></div>
+        <div class="col-10 col-sm-10 col-md-8 col-lg-8"><div class="p-1 border border-danger"><span class="heght-weight">Height / Weight</span class="plus"><span>+</span></div></div>
+    </div>
+</div>
+   </section> -->
+
+   
+    <footer>
+        <div id="footer-pc" class="d-none d-sm-none d-md-block d-lg-block text-dark">
+        <div class="container pt-4 pb-4 foot-pc">
+            <div class="row">
+                <div class="col-md-2 col-lg-2 col-xl-2 col-xxl-4">
+                    <h3>About</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-decoration-none text-dark">About Us</a></li>
+                        <li><a href="return.html" class="text-decoration-none text-dark">Return Policy</a></li>
+                        <li><a href="shipping_delivery.html" class="text-decoration-none text-dark">Shipping & Delivery</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Cancellation & Modifications</a></li>
+                    </ul>
+                </div>  
+                <div class="col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+                    <h3>Any Question</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="faq.html" class="text-decoration-none text-dark">FAQs</a></li>
+                        <li><a href="login.html" class="text-decoration-none text-dark">Customer Service</a></li>
+                        <li><a href="login.html" class="text-decoration-none text-dark">My Profile</a></li>
+                        <li><a href="setting.html" class="text-decoration-none text-dark">Settings</a></li>
+                    </ul>
+                </div>    
+                <div class="col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <h3>Categories</h3>
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <ul class="list-unstyled">
+                            <li><a href="" class="text-decoration-none text-dark">Top</a></li>
+                            <li><a href="" class="text-decoration-none text-dark">Bottoms</a></li>
+                            <li><a href="" class="text-decoration-none text-dark">Dresses & Skirts</a></li>
+                            <li><a href="" class="text-decoration-none text-dark">Co-ords</a></li>
+                            <li><a href="" class="text-decoration-none text-dark">Sports</a></li>
+                            <li><a href="" class="text-decoration-none text-dark">Jewelry</a></li>
+                            <li><a href="" class="text-decoration-none text-dark">Bags</a></li> 
+                        </ul>
+                    </div>
+                
+                    <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <ul class="list-unstyled">
+                        <li><a href="" class="text-decoration-none text-dark">Bags</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Lingerie</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Pyiamas</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Swimwear</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Curve</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Sweaters & Sweatshirts</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Outerwears</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Phone Accessories</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">other Accessories</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+                    <h3>Categories</h3>
+                    <div>
+                    <ul class="list-unstyled">
+                    <li><a href="" class="text-decoration-none text-dark">Facebook</a></li>
+                    <li><a href="" class="text-decoration-none text-dark">Twitter</a></li>
+                    <li><a href="" class="text-decoration-none text-dark">YouTube</a></li>
+                    </ul>
+                    </div>
+                    <div>
+                    <p><b>Call Us : 1800 890 1222</b><br>
+                        8:00 AM to 8:00 PM, 365 days</p>
+                    </div>
+               
+                    <div class="row">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <div><img src="assets/images/google-play.png" width="100%" alt=""></div>
+                    </div>
+                
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <div><img src="assets/images/app-store.png" width="100%" alt=""></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+
+    </footer>
+    
+
+<!--<div class="modal fade" id="bust" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="tab-pane mt-2">
+                <div class="" id="cm-in">
+                    <div class=" pb-2">
+                    <div><span class="pm"></span></div>
+                    <div class="float-end cm-in-box">    
+                    <ul class="nav nav-pills" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#sa">CM</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="pill" href="#sb">INCH</a>
+                      </li>
+                    </ul>
+                    </div>
+                    </div>
+                  
+                    <div class="">
+                    
+                    <div class="tab-content">
+                    <div id="sa" class="tab-pane">
+                        <div class=""><div class="d-flex float-end mt-2 mb-2"><div style="margin-right: 11px;"><span style="color: #ff4800;"><b>60 CM</b></span></div><div class="border border-secondary" style="padding: 0px 20px 0px 20px;margin-right: 11px;"> <span>60</span></div><div><span>CM</span></samp></div></div></div>
+                        
+                        <div class="">
+                        <div class="rulerContainer">
+                        <div class="ruler">
+                            <div class="numberMeasurement-rulerOuter" style="width: 50%;">
+                                <div class="numberMeasurement-rulerOuterLine"></div>
+                            </div>
+                            <div class="numberMeasurement-rulerMiddle" style="width: 100%;">
+                                <div class="ub-image">
+                                <img class="ub-image-img" src="assets/images/size-line.png" draggable="false" style="object-fit: fill; display: block;"></div>
+                            </div>
+                            <div class="rulerOuter" style="width: 50%;">
+                                <div class="rulerOuterLine"></div>
+                            </div>
+                        </div>
+                        <div class="markerContainer">
+                            <span class="numberMeasurement">60</span>
+                            <span class="numberMeasurement">77</span>
+                            <span class="numberMeasurement">94</span>
+                            <span class="numberMeasurement">110</span>
+                        </div>
+                        </div>
+                        </div>
+                    <div class="pt-2">
+                        <p class="m-0"><b>How to measure upper bust ?</b></p>
+                        <p>Measure the circumference over the fullest part of your bust as shown in the reference image</p>
+                        <img src="assets/images/size-b.png" alt="" width="100%">
+                    </div>
+                    </div>
+                    <div id="sb" class="tab-pane fade active show table-responsive">
+                        <div class="mb-2"><div class="d-flex float-end mt-2 mb-2"><div style="margin-right: 11px;"><span style="color: #ff4800;"><b>60 INCH</b></span></div><div class="border border-secondary" style="padding: 0px 20px 0px 20px;margin-right: 11px;"> <span>60</span></div><div><span>INCH</span></samp></div></div></div>
+                        
+                        <div class="">
+                        <div class="rulerContainer">
+                        <div class="ruler">
+                            <div class="numberMeasurement-rulerOuter" style="width: 50%;">
+                                <div class="numberMeasurement-rulerOuterLine"></div>
+                            </div>
+                            <div class="numberMeasurement-rulerMiddle" style="width: 100%;">
+                                <div class="ub-image">
+                                <img class="ub-image-img" src="assets/images/size-line.png" draggable="false" style="object-fit: fill; display: block;"></div>
+                            </div>
+                            <div class="rulerOuter" style="width: 50%;">
+                                <div class="rulerOuterLine"></div>
+                            </div>
+                        </div>
+                        <div class="markerContainer">
+                            <span class="numberMeasurement">60</span>
+                            <span class="numberMeasurement">77</span>
+                            <span class="numberMeasurement">94</span>
+                            <span class="numberMeasurement">110</span>
+                        </div>
+                        </div>
+                        </div>
+                    <div class="pt-2">
+                        <p class="m-0"><b>How to measure upper bust ?</b></p>
+                        <p>Measure the circumference over the fullest part of your bust as shown in the reference image</p>
+                        <img src="assets/images/size-b.png" alt="" width="100%">
+                    </div>
+                    </div>
+                    
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark w-100">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="modal fade" id="waistline" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="tab-pane mt-2">
+                <div class="" id="cm-in">
+                    <div class=" pb-2">
+                    <div><span class="pm"></span></div>
+                    <div class="float-end cm-in-box">    
+                    <ul class="nav nav-pills" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#sc">CM</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="pill" href="#sd">INCH</a>
+                      </li>
+                    </ul>
+                    </div>
+                    </div>
+                  
+                    <div class="">
+                    
+                    <div class="tab-content">
+                    <div id="sc" class="tab-pane">
+                        <div class=""><div class="d-flex float-end mt-2 mb-2"><div style="margin-right: 11px;"><span style="color: #ff4800;"><b>60 CM</b></span></div><div class="border border-secondary" style="padding: 0px 20px 0px 20px;margin-right: 11px;"> <span>60</span></div><div><span>CM</span></samp></div></div></div>
+                        
+                        <div class="">
+                        <div class="rulerContainer">
+                        <div class="ruler">
+                            <div class="numberMeasurement-rulerOuter" style="width: 50%;">
+                                <div class="numberMeasurement-rulerOuterLine"></div>
+                            </div>
+                            <div class="numberMeasurement-rulerMiddle" style="width: 100%;">
+                                <div class="ub-image">
+                                <img class="ub-image-img" src="assets/images/size-line.png" draggable="false" style="object-fit: fill; display: block;"></div>
+                            </div>
+                            <div class="rulerOuter" style="width: 50%;">
+                                <div class="rulerOuterLine"></div>
+                            </div>
+                        </div>
+                        <div class="markerContainer">
+                            <span class="numberMeasurement">60</span>
+                            <span class="numberMeasurement">77</span>
+                            <span class="numberMeasurement">94</span>
+                            <span class="numberMeasurement">110</span>
+                        </div>
+                        </div>
+                        </div>
+                    <div class="pt-2">
+                        <p class="m-0"><b>How to measure waist ？</b></p>
+                        <p>Measure the circumference around the waist at the narrowest part between the hip and underbust as shown in the reference image</p>
+                        <img src="assets/images/size-w.png" alt="" width="100%">
+                    </div>
+                    </div>
+                    <div id="sd" class="tab-pane fade active show table-responsive">
+                        <div class="mb-2"><div class="d-flex float-end mt-2 mb-2"><div style="margin-right: 11px;"><span style="color: #ff4800;"><b>60 INCH</b></span></div><div class="border border-secondary" style="padding: 0px 20px 0px 20px;margin-right: 11px;"> <span>60</span></div><div><span>INCH</span></samp></div></div></div>
+                       
+                        <div class="">
+                        <div class="rulerContainer">
+                        <div class="ruler">
+                            <div class="numberMeasurement-rulerOuter" style="width: 50%;">
+                                <div class="numberMeasurement-rulerOuterLine"></div>
+                            </div>
+                            <div class="numberMeasurement-rulerMiddle" style="width: 100%;">
+                                <div class="ub-image">
+                                <img class="ub-image-img" src="assets/images/size-line.png" draggable="false" style="object-fit: fill; display: block;"></div>
+                            </div>
+                            <div class="rulerOuter" style="width: 50%;">
+                                <div class="rulerOuterLine"></div>
+                            </div>
+                        </div>
+                        <div class="markerContainer">
+                            <span class="numberMeasurement">60</span>
+                            <span class="numberMeasurement">77</span>
+                            <span class="numberMeasurement">94</span>
+                            <span class="numberMeasurement">110</span>
+                        </div>
+                        </div>
+                        </div>
+                    <div class="pt-2">
+                        <p class="m-0"><b>How to measure upper bust ?</b></p>
+                        <p>Measure the circumference around the waist at the narrowest part between the hip and underbust as shown in the reference image</p>
+                        <img src="assets/images/size-w.png" alt="" width="100%">
+                    </div>
+                    </div>
+                    
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark w-100">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>-->
+    
+  
+    
+    <script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+        myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+        })
+    </script>
+    </body>
+    </html>    

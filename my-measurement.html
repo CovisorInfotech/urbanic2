@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- OwlCarousel2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+a{text-decoration: none;color: #323232;}    
+.head-back-icon {
+    width: 24px;
+}
+.nr-box {
+    background: #f8f6f3;
+}
+#cm-in .cm-in-box {
+    margin-top: -26px;
+}
+#cm-in .nav-item {
+    margin-left: 15px;
+}
+#cm-in .nav-pills .nav-link {
+    border-radius: 0px;
+}
+#cm-in .nav-link {
+    padding: 0px!important;
+}
+#cm-in .nav-pills .nav-link.active {
+    border-bottom: 1px solid black;
+    color: #000;
+    background: none;
+}
+.size-reco li{font-size: 15px;}
+.plus{float: right;}
+ .color-change{
+animation-name: color-chang;
+animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+@keyframes color-chang {
+    50% {
+    background-color: #ff2c00;
+    color: #fff;
+}
+}
+.nav-pills li .active{border-bottom: 2px solid #777777;} 
+.productChart {
+    font-size: 13px;
+}
+table{width: 100%;}
+
+.img-size{width: 40%;}
+.table-pt{margin-top: -348px;position: relative;}
+@media only screen and (max-width: 600px) {
+    .img-size{width: 80%!important;}
+    .table-pt{margin-top: -190px;position: relative;}
+}
+#footer-pc{background: rgba(21,27,57,.08);    margin-top: 82px;}
+.modal-header{border: none;}
+.ub-image{overflow: scroll;
+    width: 100%;
+    position: relative;
+    border: 1px solid #8a8989;}
+/* .rulerContainer{}
+.ruler{ } */
+
+/* .numberMeasurement-rulerOuter{}
+.numberMeasurement-rulerMiddle{} */
+.ub-image-img{    height: 100%;
+    width: 100%;}
+.markerContainer{display: flex;justify-content: space-between;}   
+.numberMeasurement{font-size: 13px;}         
+</style>
+
+</head>
+<body class=""> 
+   <div class="bg-white border-bottom-secondary top-0 position-fixed w-100 border-bottom-nr">
+    <div class="container">
+        <div class="row pt-2 pb-2">
+            <div class="col-2 col-md-2 col-lg-2"><a href="size-guide.html"><img src="assets/images/laft-arr.png" alt="" class="head-back-icon"></a></div>
+            <div class="col-8 col-md-8 col-lg-8"><h4 class="text-center m-0 p-0">My Measurement</h4></div>
+            <div class="col-2 col-md-2 col-lg-2"></div>
+        </div>    
+    </div>
+   </div>
+
+   <section class="mt-5 mt-5 mb-5 pt-4">
+    <div class="container">
+        <div class="" style="font-size: 12px;"><p>The information you provide is only for size recommendation</p></div>
+        <div class="mt-5" id="cm-in">
+            <div class=" pb-2">
+            <div><span class="pm"></span></div>
+            <div class="float-end cm-in-box">    
+            <ul class="nav nav-pills" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#sa">CM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="pill" href="#sb">INCH</a>
+              </li>
+            </ul>
+            </div>
+            </div>
+          
+            <!-- Tab panes -->
+            <div class="">
+            
+            <div class="tab-content">
+            <div id="sa" class="tab-pane">
+
+                <div class="mb-4">
+                <div class="row">
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 m-auto"><span>Height</span></div> 
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 text-center m-auto" style="color: #ff4800;"><b><span>66 </span> <span> INCH</span></b></div>   
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4"><div class="d-flex float-end mt-2"><div style="margin-right: 11px;"></div><div class="border border-secondary" style="padding: 0px 20px 0px 20px;margin-right: 11px;"> <span>60</span></div><div><span>CM</span></samp></div></div></div>
+                <!-- <div><div class="size-line"></div><div><img src="assets/images/size-line.png" alt=""></div></div> -->
+                </div>
+
+                <div class="mt-2">
+                <div class="rulerContainer">
+                <div class="ruler">
+                    <div class="numberMeasurement-rulerOuter" style="width: 50%;">
+                        <div class="numberMeasurement-rulerOuterLine"></div>
+                    </div>
+                    <div class="numberMeasurement-rulerMiddle" style="width: 100%;">
+                        <div class="ub-image">
+                        <img class="ub-image-img" src="assets/images/size-line.png" draggable="false" style="object-fit: fill; display: block;"></div>
+                    </div>
+                    <div class="rulerOuter" style="width: 50%;">
+                        <div class="rulerOuterLine"></div>
+                    </div>
+                </div>
+                <div class="markerContainer">
+                    <span class="numberMeasurement">60</span>
+                    <span class="numberMeasurement">77</span>
+                    <span class="numberMeasurement">94</span>
+                    <span class="numberMeasurement">110</span>
+                </div>
+                </div>
+                </div>
+                </div>
+
+
+                <div class="mb-4">
+                    <div class="row">
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 m-auto"><span>Weight</span></div> 
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 text-center m-auto" style="color: #ff4800;"><b><span>66 </span> <span> KG</span></b></div>   
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4"><div class="d-flex float-end mt-2"><div style="margin-right: 11px;"></div><div class="border border-secondary" style="padding: 0px 20px 0px 20px;margin-right: 11px;"> <span>60</span></div><div><span>KG</span></samp></div></div></div>
+                    <!-- <div><div class="size-line"></div><div><img src="assets/images/size-line.png" alt=""></div></div> -->
+                    </div>
+    
+                    <div class="mt-2">
+                    <div class="rulerContainer">
+                    <div class="ruler">
+                        <div class="numberMeasurement-rulerOuter" style="width: 50%;">
+                            <div class="numberMeasurement-rulerOuterLine"></div>
+                        </div>
+                        <div class="numberMeasurement-rulerMiddle" style="width: 100%;">
+                            <div class="ub-image">
+                            <img class="ub-image-img" src="assets/images/size-line.png" draggable="false" style="object-fit: fill; display: block;"></div>
+                        </div>
+                        <div class="rulerOuter" style="width: 50%;">
+                            <div class="rulerOuterLine"></div>
+                        </div>
+                    </div>
+                    <div class="markerContainer">
+                        <span class="numberMeasurement">60</span>
+                        <span class="numberMeasurement">77</span>
+                        <span class="numberMeasurement">94</span>
+                        <span class="numberMeasurement">110</span>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+               
+                        
+                        <div class="mb-4">
+                            <div class="row">
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 m-auto"><span>Waistline</span></div> 
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 text-center m-auto" style="color: #ff4800;"><b><span>66 </span> <span> INCH</span></b></div>   
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4"><div class="d-flex float-end mt-2"><div style="margin-right: 11px;"></div><div class="border border-secondary" style="padding: 0px 20px 0px 20px;margin-right: 11px;"> <span>60</span></div><div><span>CM</span></samp></div></div></div>
+                            <!-- <div><div class="size-line"></div><div><img src="assets/images/size-line.png" alt=""></div></div> -->
+                            </div>
+            
+                            <div class="mt-2">
+                            <div class="rulerContainer">
+                            <div class="ruler">
+                                <div class="numberMeasurement-rulerOuter" style="width: 50%;">
+                                    <div class="numberMeasurement-rulerOuterLine"></div>
+                                </div>
+                                <div class="numberMeasurement-rulerMiddle" style="width: 100%;">
+                                    <div class="ub-image">
+                                    <img class="ub-image-img" src="assets/images/size-line.png" draggable="false" style="object-fit: fill; display: block;"></div>
+                                </div>
+                                <div class="rulerOuter" style="width: 50%;">
+                                    <div class="rulerOuterLine"></div>
+                                </div>
+                            </div>
+                            <div class="markerContainer">
+                                <span class="numberMeasurement">60</span>
+                                <span class="numberMeasurement">77</span>
+                                <span class="numberMeasurement">94</span>
+                                <span class="numberMeasurement">110</span>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+
+
+                            <div class="mb-4">
+                                <div class="row">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 m-auto"><span>Bust</span></div> 
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 m-auto"><span class="float-end"><span>Cup Size </span>Upper Bust</span></span></div> 
+                                <div class="col-4 col-sm-4 col-md-4 col-lg-4 m-auto"></div> 
+                                <div class="col-4 col-sm-4 col-md-4 col-lg-4 text-center m-auto" style="color: #ff4800;"><b><span>66 </span> <span> INCH</span></b></div>   
+                                <div class="col-4 col-sm-4 col-md-4 col-lg-4"><div class="d-flex float-end mt-2"><div style="margin-right: 11px;"></div><div class="border border-secondary" style="padding: 0px 20px 0px 20px;margin-right: 11px;"> <span>60</span></div><div><span>CM</span></samp></div></div></div>
+                               
+                                </div>
+                
+                                <div class="mt-2">
+                                <div class="rulerContainer">
+                                <div class="ruler">
+                                    <div class="numberMeasurement-rulerOuter" style="width: 50%;">
+                                        <div class="numberMeasurement-rulerOuterLine"></div>
+                                    </div>
+                                    <div class="numberMeasurement-rulerMiddle" style="width: 100%;">
+                                        <div class="ub-image">
+                                        <img class="ub-image-img" src="assets/images/size-line.png" draggable="false" style="object-fit: fill; display: block;"></div>
+                                    </div>
+                                    <div class="rulerOuter" style="width: 50%;">
+                                        <div class="rulerOuterLine"></div>
+                                    </div>
+                                </div>
+                                <div class="markerContainer">
+                                    <span class="numberMeasurement">60</span>
+                                    <span class="numberMeasurement">77</span>
+                                    <span class="numberMeasurement">94</span>
+                                    <span class="numberMeasurement">110</span>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="mt-4 mb-4"><button type="button" class="btn btn-dark w-100">UPDATE</button></div>
+            
+            </div>
+
+            <div id="sb" class="tab-pane active">
+                <div class="mb-4">
+                    <div class="row">
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 m-auto"><span>Height</span></div> 
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 text-center m-auto" style="color: #ff4800;"><b><span>66 </span> <span> INCH</span></b></div>   
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4"><div class="d-flex float-end mt-2"><div style="margin-right: 11px;"></div><div class="border border-secondary" style="padding: 0px 20px 0px 20px;margin-right: 11px;"> <span>60</span></div><div><span>CM</span></samp></div></div></div>
+                    <!-- <div><div class="size-line"></div><div><img src="assets/images/size-line.png" alt=""></div></div> -->
+                    </div>
+    
+                    <div class="mt-2">
+                    <div class="rulerContainer">
+                    <div class="ruler">
+                        <div class="numberMeasurement-rulerOuter" style="width: 50%;">
+                            <div class="numberMeasurement-rulerOuterLine"></div>
+                        </div>
+                        <div class="numberMeasurement-rulerMiddle" style="width: 100%;">
+                            <div class="ub-image">
+                            <img class="ub-image-img" src="assets/images/size-line.png" draggable="false" style="object-fit: fill; display: block;"></div>
+                        </div>
+                        <div class="rulerOuter" style="width: 50%;">
+                            <div class="rulerOuterLine"></div>
+                        </div>
+                    </div>
+                    <div class="markerContainer">
+                        <span class="numberMeasurement">60</span>
+                        <span class="numberMeasurement">77</span>
+                        <span class="numberMeasurement">94</span>
+                        <span class="numberMeasurement">110</span>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+    
+    
+                    <div class="mb-4">
+                        <div class="row">
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 m-auto"><span>Weight</span></div> 
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 text-center m-auto" style="color: #ff4800;"><b><span>66 </span> <span> KG</span></b></div>   
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4"><div class="d-flex float-end mt-2"><div style="margin-right: 11px;"></div><div class="border border-secondary" style="padding: 0px 20px 0px 20px;margin-right: 11px;"> <span>60</span></div><div><span>KG</span></samp></div></div></div>
+                        <!-- <div><div class="size-line"></div><div><img src="assets/images/size-line.png" alt=""></div></div> -->
+                        </div>
+        
+                        <div class="mt-2">
+                        <div class="rulerContainer">
+                        <div class="ruler">
+                            <div class="numberMeasurement-rulerOuter" style="width: 50%;">
+                                <div class="numberMeasurement-rulerOuterLine"></div>
+                            </div>
+                            <div class="numberMeasurement-rulerMiddle" style="width: 100%;">
+                                <div class="ub-image">
+                                <img class="ub-image-img" src="assets/images/size-line.png" draggable="false" style="object-fit: fill; display: block;"></div>
+                            </div>
+                            <div class="rulerOuter" style="width: 50%;">
+                                <div class="rulerOuterLine"></div>
+                            </div>
+                        </div>
+                        <div class="markerContainer">
+                            <span class="numberMeasurement">60</span>
+                            <span class="numberMeasurement">77</span>
+                            <span class="numberMeasurement">94</span>
+                            <span class="numberMeasurement">110</span>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                   
+                            
+                            <div class="mb-4">
+                                <div class="row">
+                                <div class="col-4 col-sm-4 col-md-4 col-lg-4 m-auto"><span>Waistline</span></div> 
+                                <div class="col-4 col-sm-4 col-md-4 col-lg-4 text-center m-auto" style="color: #ff4800;"><b><span>66 </span> <span> INCH</span></b></div>   
+                                <div class="col-4 col-sm-4 col-md-4 col-lg-4"><div class="d-flex float-end mt-2"><div style="margin-right: 11px;"></div><div class="border border-secondary" style="padding: 0px 20px 0px 20px;margin-right: 11px;"> <span>60</span></div><div><span>CM</span></samp></div></div></div>
+                                <!-- <div><div class="size-line"></div><div><img src="assets/images/size-line.png" alt=""></div></div> -->
+                                </div>
+                
+                                <div class="mt-2">
+                                <div class="rulerContainer">
+                                <div class="ruler">
+                                    <div class="numberMeasurement-rulerOuter" style="width: 50%;">
+                                        <div class="numberMeasurement-rulerOuterLine"></div>
+                                    </div>
+                                    <div class="numberMeasurement-rulerMiddle" style="width: 100%;">
+                                        <div class="ub-image">
+                                        <img class="ub-image-img" src="assets/images/size-line.png" draggable="false" style="object-fit: fill; display: block;"></div>
+                                    </div>
+                                    <div class="rulerOuter" style="width: 50%;">
+                                        <div class="rulerOuterLine"></div>
+                                    </div>
+                                </div>
+                                <div class="markerContainer">
+                                    <span class="numberMeasurement">60</span>
+                                    <span class="numberMeasurement">77</span>
+                                    <span class="numberMeasurement">94</span>
+                                    <span class="numberMeasurement">110</span>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+    
+    
+                                <div class="mb-4">
+                                    <div class="row">
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 m-auto"><span>Bust</span></div> 
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 m-auto"><span class="float-end"><span>Cup Size </span>Upper Bust</span></span></div> 
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 m-auto"></div> 
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 text-center m-auto" style="color: #ff4800;"><b><span>66 </span> <span> INCH</span></b></div>   
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-4"><div class="d-flex float-end mt-2"><div style="margin-right: 11px;"></div><div class="border border-secondary" style="padding: 0px 20px 0px 20px;margin-right: 11px;"> <span>60</span></div><div><span>CM</span></samp></div></div></div>
+                                   
+                                    </div>
+                    
+                                    <div class="mt-2">
+                                    <div class="rulerContainer">
+                                    <div class="ruler">
+                                        <div class="numberMeasurement-rulerOuter" style="width: 50%;">
+                                            <div class="numberMeasurement-rulerOuterLine"></div>
+                                        </div>
+                                        <div class="numberMeasurement-rulerMiddle" style="width: 100%;">
+                                            <div class="ub-image">
+                                            <img class="ub-image-img" src="assets/images/size-line.png" draggable="false" style="object-fit: fill; display: block;"></div>
+                                        </div>
+                                        <div class="rulerOuter" style="width: 50%;">
+                                            <div class="rulerOuterLine"></div>
+                                        </div>
+                                    </div>
+                                    <div class="markerContainer">
+                                        <span class="numberMeasurement">60</span>
+                                        <span class="numberMeasurement">77</span>
+                                        <span class="numberMeasurement">94</span>
+                                        <span class="numberMeasurement">110</span>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="mt-4 mb-4"><button type="button" class="btn btn-dark w-100">UPDATE</button></div>
+            
+            </div>
+            
+            </div>
+            </div>
+
+            
+        </div>
+    </div>
+   </section>
+
+   <!-- <section>
+    <div class="container">
+    <div class="row">
+        <div class="col-2 col-sm-2 col-md-4 col-lg-4"><div class="border border-secondary"><img src="assets/images/woman.png" alt="" class="w-100"></div></div>
+        <div class="col-10 col-sm-10 col-md-8 col-lg-8"><div class="p-1 border border-danger"><span class="heght-weight">Height / Weight</span class="plus"><span>+</span></div></div>
+    </div>
+</div>
+   </section> -->
+
+   
+    <footer>
+        <div id="footer-pc" class="d-none d-sm-none d-md-block d-lg-block text-dark">
+        <div class="container pt-4 pb-4 foot-pc">
+            <div class="row">
+                <div class="col-md-2 col-lg-2 col-xl-2 col-xxl-4">
+                    <h3>About</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-decoration-none text-dark">About Us</a></li>
+                        <li><a href="return.html" class="text-decoration-none text-dark">Return Policy</a></li>
+                        <li><a href="shipping_delivery.html" class="text-decoration-none text-dark">Shipping & Delivery</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Cancellation & Modifications</a></li>
+                    </ul>
+                </div>  
+                <div class="col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+                    <h3>Any Question</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="faq.html" class="text-decoration-none text-dark">FAQs</a></li>
+                        <li><a href="login.html" class="text-decoration-none text-dark">Customer Service</a></li>
+                        <li><a href="login.html" class="text-decoration-none text-dark">My Profile</a></li>
+                        <li><a href="setting.html" class="text-decoration-none text-dark">Settings</a></li>
+                    </ul>
+                </div>    
+                <div class="col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <h3>Categories</h3>
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <ul class="list-unstyled">
+                            <li><a href="" class="text-decoration-none text-dark">Top</a></li>
+                            <li><a href="" class="text-decoration-none text-dark">Bottoms</a></li>
+                            <li><a href="" class="text-decoration-none text-dark">Dresses & Skirts</a></li>
+                            <li><a href="" class="text-decoration-none text-dark">Co-ords</a></li>
+                            <li><a href="" class="text-decoration-none text-dark">Sports</a></li>
+                            <li><a href="" class="text-decoration-none text-dark">Jewelry</a></li>
+                            <li><a href="" class="text-decoration-none text-dark">Bags</a></li> 
+                        </ul>
+                    </div>
+                
+                    <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <ul class="list-unstyled">
+                        <li><a href="" class="text-decoration-none text-dark">Bags</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Lingerie</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Pyiamas</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Swimwear</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Curve</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Sweaters & Sweatshirts</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Outerwears</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Phone Accessories</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">other Accessories</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+                    <h3>Categories</h3>
+                    <div>
+                    <ul class="list-unstyled">
+                    <li><a href="" class="text-decoration-none text-dark">Facebook</a></li>
+                    <li><a href="" class="text-decoration-none text-dark">Twitter</a></li>
+                    <li><a href="" class="text-decoration-none text-dark">YouTube</a></li>
+                    </ul>
+                    </div>
+                    <div>
+                    <p><b>Call Us : 1800 890 1222</b><br>
+                        8:00 AM to 8:00 PM, 365 days</p>
+                    </div>
+               
+                    <div class="row">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <div><img src="assets/images/google-play.png" width="100%" alt=""></div>
+                    </div>
+                
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <div><img src="assets/images/app-store.png" width="100%" alt=""></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+
+    </footer>
+    
+
+    </body>
+    </html>    
